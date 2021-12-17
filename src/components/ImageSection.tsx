@@ -9,7 +9,7 @@ const ImageSection = () => {
 
   return (
     <>
-      <MotionBox
+      {/* <MotionBox
         animate={{ y: 20, scale: 0.97 }}
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
         marginY={8}
@@ -22,12 +22,13 @@ const ImageSection = () => {
           height={400}
           alt="Welcome illustration"
         />
-      </MotionBox>
+      </MotionBox> */}
 
       <Flex marginY={4} justifyContent="center" alignItems="center">
         <HelperImage src={`/nextjs-${colorMode}.svg`} label="NextJS" />
         <HelperImage src={`/chakraui-logo.svg`} label="Chakra UI" />
         <HelperImage src={`/ts-logo.svg`} label="Typescript" />
+        <HelperImage src={`/ts-logo.svg`} label="ChartJS" />
       </Flex>
     </>
   );

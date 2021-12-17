@@ -21,9 +21,10 @@ const TextSection = () => {
         backgroundColor={colorMode === "light" ? "gray.200" : "gray.500"}
         padding={4}
         borderRadius={4}
+        margin="16px 0px"
       >
         <Box d="flex" alignItems="center" fontSize={textSize}>
-          Next.js starter fueled with Typescript and Chakra-UI.
+          This is different charts implementation using Chart.js, Next.js, Chakra-UI and Typescript.
         </Box>
       </Box>
     </>
