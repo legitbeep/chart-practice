@@ -28,6 +28,6 @@ export default function Charts() {
     ) : error ? (
         <h1>Error!</h1>
     ) : (
-        <TableChart data={data} />
+        <TableChart datas={data} />
     )
 }

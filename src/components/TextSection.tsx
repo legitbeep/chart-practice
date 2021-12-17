@@ -24,7 +24,7 @@ const TextSection = () => {
         margin="16px 0px"
       >
         <Box d="flex" alignItems="center" fontSize={textSize}>
-          This is different charts implementation using Chart.js, Next.js, Chakra-UI and Typescript.
+          This project is practice of different implementation of charts using Chart.js, Next.js, Chakra-UI and Typescript.
         </Box>
       </Box>
     </>
