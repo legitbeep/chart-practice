@@ -8,3 +8,9 @@ export const CHART_COLORS = {
     purple: 'rgb(153, 102, 255)',
     grey: 'rgb(201, 203, 207)'
   };
+  
+  export const getRadius = (val:number, maxValue:number) => {
+    if (val >= maxValue)  return 10;
+    else if (val <= 1000) return 1;
+    return Math.floor(val/maxValue);
+  }
