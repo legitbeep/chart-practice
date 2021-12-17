@@ -6,26 +6,25 @@ const DrawCircle = ({data,id}:{data:Data, id:number}) => {
   const backgroundColor = Object.values(CHART_COLORS)[colorIndex] as string;
   const radius = getRadius(data.value,10000);
   return (
-    <Flex borderRadius="full" margin="0 auto" backgroundColor={backgroundColor} height={Math.max(radius*15,50)+ "px"} width={Math.max(radius*15,50)+ "px"} alignItems="center" justifyContent="center">
+    <Flex borderRadius="full" margin="0 auto" backgroundColor={backgroundColor} height={Math.max(50,radius*10)+ "px"} width={Math.max(50,radius*10)+ "px"} alignItems="center" justifyContent="center">
       {data.value >= 1000 ? Math.floor(data.value / 1000) + "K" : data.value}
     </Flex>
   )
 }
 
 export const TableChart = ({datas}:{datas:Datas}) => {
-  console.log(datas.data)
     return (
-        <Table variant='simple'>
+  <Flex overflowX="auto"><Table variant='simple'>
   <TableCaption>Data Representation in Table format</TableCaption>
   <Thead>
     <Tr>
-      <Th>Keywords</Th>
-      <Th>Facebook</Th>
-      <Th>Twitter</Th>
-      <Th>Youtube</Th>
-      <Th>Instagram</Th>
-      <Th>Reddit</Th>
-      <Th>Others</Th>
+      <Th textAlign='center'>Keywords</Th>
+      <Th textAlign='center'>Facebook</Th>
+      <Th textAlign='center'>Twitter</Th>
+      <Th textAlign='center'>Youtube</Th>
+      <Th textAlign='center'>Instagram</Th>
+      <Th textAlign='center'>Reddit</Th>
+      <Th textAlign='center'>Others</Th>
     </Tr>
   </Thead>
  {
@@ -72,7 +71,7 @@ export const TableChart = ({datas}:{datas:Datas}) => {
           })}
 </Tr>
 </Tbody>)}
-</Table>
+</Table></Flex>
     )
 }
 
