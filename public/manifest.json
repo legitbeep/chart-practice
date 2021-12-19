@@ -1,11 +1,10 @@
 {
-    "short_name": "nextchakra-starter",
-    "name": "Next.js, Chakra-UI Template",
+    "short_name": "chart-practice",
+    "name": "Charts practice",
     "lang": "en",
     "start_url": "/",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
-    "dir": "ltr",
     "display": "standalone",
     "orientation": "portrait",
     "prefer_related_applications": false

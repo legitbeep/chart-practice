@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useToast } from '@chakra-ui/react';
+import { useToast, Flex } from '@chakra-ui/react';
 
 import {TableChart} from './Table';
+import Doughnut from './DoughnutChart';
+import ProgressChart from './ProgressChart';
+import LineChart from './LineChart';
 
 export default function Charts() {
     const [loading, setLoading] = useState(false);
@@ -34,7 +37,18 @@ export default function Charts() {
         <h1>Loading...</h1>
     ) : error ? (
         <h1>Error!</h1>
-    ) : (
-        <TableChart datas={data} />
-    )
+    ) : data && (
+            <Flex gridGap={4} flexDir="column" >
+                <TableChart datas={data} />
+                <Flex flexWrap="wrap" justifyContent="space-between" >
+                    <Flex width="400px" >
+                    <Doughnut datas={data} />
+                    </Flex>
+                    <Flex width="400px" >
+                    <ProgressChart datas={data} />
+                    </Flex>
+                </Flex>
+                    <LineChart datas={data} />
+            </Flex>
+        )
 }

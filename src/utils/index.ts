@@ -13,3 +13,29 @@ export const CHART_COLORS = {
     else if (val <= 1000) return 1;
     return Math.floor(val/maxValue);
   }
+
+export const filterData = (datas: Datas) => {
+  const repeating:string[] = [], datasets:Record<string, number> = {}, values:Record<string, number[]> = {};
+  const dataset = datas.data && datas.data.filter(d => {
+      
+    if(values[d.source]){
+      values[d.source].push(d.value);
+    } else {
+      values[d.source] = [d.value];
+    }
+    if( !repeating.includes(d.source) ){
+          repeating.push(d.source);
+          if(!datasets[d.source]){
+            datasets[d.source] = d.value;
+          }
+          else {
+            datasets[d.source] += d.value;
+          }
+          return true;
+      } else return false;
+  })
+  const labels = dataset?.map(data => data.source)
+  const dataValues = Object.values(datasets);
+  console.log(dataValues)
+  return { labels ,dataValues: dataValues ? dataValues : undefined, values};
+}

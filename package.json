@@ -1,5 +1,5 @@
 {
-  "name": "nextchakra-starter",
+  "name": "Chart-Practice",
   "private": true,
   "author": "legitbeep",
   "scripts": {
@@ -23,6 +23,7 @@
     "next-pwa": "^5.4.1",
     "next-seo": "^4.28.1",
     "react": "17.0.2",
+    "react-chartjs-2": "^4.0.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1"
   },
