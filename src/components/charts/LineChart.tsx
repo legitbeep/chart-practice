@@ -4,12 +4,13 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS,CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js';
 
 import { filterData, CHART_COLORS } from "utils";
+import { Merge } from "types/merge";
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
 
 const LineChart = ({datas}:{datas:Datas}) => {
     const {labels,values,dataValues} = filterData(datas);
     console.log(values)
-    const datasets = ( values && labels) ? labels.map((label,index) => {
+    const datasets:Merge<{ cubicInterpolationMode: "monotone" },any>= ( values && labels) ? labels.map((label,index) => {
         return {
             label,
             data: values[label] || undefined,
