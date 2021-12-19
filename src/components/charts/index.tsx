@@ -25,17 +25,6 @@ export default function Charts() {
     useEffect(() => {
        fetchData();
     },[])
-
-    useEffect(() => {
-        if (error)
-        useToast({
-            title: 'Error Occured.',
-            description: "Unable to fetch data from server.",
-            status: 'error',
-            duration: 10000,
-            isClosable: true,
-          })
-    },[error])
     
     return loading ? (
         <h1>Loading...</h1>
